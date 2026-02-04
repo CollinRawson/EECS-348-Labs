@@ -1,0 +1,3 @@
+echo 'Directory Printer'
+read -p 'Enter the directory to print: ' userdir
+ls "$userdir" -C
