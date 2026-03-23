@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 2</title>
+    <style>
+        :root {
+            --border-size: 5px;
+            --border-r: 0;
+            --border-g: 0;
+            --border-b: 0;
+            --text-background-r: 255;
+            --text-background-g: 255;
+            --text-background-b: 255;
+        }
+        #sample {
+            border: var(--border-size) solid rgb(var(--border-r), var(--border-g), var(--border-b));
+            background-color: rgb(var(--text-background-r), var(--text-background-g), var(--text-background-b));
+        }
+    </style>
+</head>
+<body>
+    <h1>Practice 2</h1>
+    <p id="sample">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque ratione possimus saepe id pariatur. Rem minus quo eveniet quibusdam impedit, possimus id, blanditiis facere ex facilis minima! Numquam, amet ipsum.</p>
+    <p>Border Red (0-255): <input id="border-r" type="text" value=""></p>
+    <p>Border Green (0-255): <input id="border-g" type="text" value=""></p>
+    <p>Border Blue (0-255): <input id="border-b" type="text" value=""></p>
+    <p>Border Width: <input id="border-width" type="text" value=""></p>
+    <p>Background Red (0-255): <input id="bg-r" type="text" value=""></p>
+    <p>Background Green (0-255): <input id="bg-g" type="text" value=""></p>
+    <p>Background Blue (0-255): <input id="bg-b" type="text" value=""></p>
+    <button onclick="change_color()">Change the color!</button>
+</body>
+<script>
+    function change_color() {
+        border_r = document.getElementById("border-r").value;
+        border_g = document.getElementById("border-g").value;
+        border_b = document.getElementById("border-b").value;
+        border_size = document.getElementById("border-width").value;
+        bg_r = document.getElementById("bg-r").value;
+        bg_g = document.getElementById("bg-g").value;
+        bg_b = document.getElementById("bg-b").value;
+        document.getElementById("sample").style.border = `${border_size}px solid rgb(${border_r}, ${border_g}, ${border_b})`;
+        document.getElementById("sample").style.backgroundColor = `rgb(${bg_r}, ${bg_g}, ${bg_b})`;
+    }
+
+</script>
+</html>

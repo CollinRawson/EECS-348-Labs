@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 3</title>
+</head>
+<body>
+    <h1>Practice 3</h1>
+    <p>Enter Password: <input id="pwd1" type="text" value=""></p>
+    <p>Repeat Password: <input id="pwd2" type="text" value=""></p>
+    <button onclick="checkpasswords()">Check Passwords</button>
+</body>
+<script>
+    function checkpasswords() {
+        pwd1 = document.getElementById("pwd1").value;
+        pwd2 = document.getElementById("pwd2").value;
+        if (pwd1.length <= 8 ) {
+            alert("Password is too short")
+        }
+        else if (pwd1 != pwd2) {
+            alert("Passwords do not match")
+        }
+        else {
+            alert("Valid passwords match")
+        }
+    }
+</script>
+</html>
